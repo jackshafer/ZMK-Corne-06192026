@@ -105,10 +105,10 @@
         raise_layer {
             display-name = "Raise";
             bindings = <
-&kp TAB    &kp EXCL          &kp AT             &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &hc LEFT_BRACE LEFT_BRACE  &hc RIGHT_BRACE RIGHT_BRACKET      &hc AMPS KP_NUMBER_7         &hc ASTRK KP_NUMBER_8    &hc TILDE KP_NUMBER_9
-&kp LCTRL  &kp F1            &kp F2             &kp F3    &kp F4    &kp F5       &kp F6     &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS              &hc DOLLAR KP_NUMBER_4       &hc PERCENT KP_NUMBER_5  &hc CARET KP_NUMBER_6
-&kp LSHFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &trans    &trans       &kp UNDER  &kp LEFT_PARENTHESIS       &hc RIGHT_PARENTHESIS KP_NUMBER_0  &hc EXCLAMATION KP_NUMBER_1  &hc AT_SIGN KP_NUMBER_2  &hc HASH KP_NUMBER_3
-                                                &kp LGUI  &trans    &kp SPACE    &kp RET    &trans                     &trans
+&kp TAB    &kp EXCL          &kp AT             &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET           &hc LEFT_BRACE LEFT_BRACE  &hc RIGHT_BRACE RIGHT_BRACKET      &hc AMPS KP_NUMBER_7         &hc ASTRK KP_NUMBER_8    &hc TILDE KP_NUMBER_9
+&kp LCTRL  &kp F1            &kp F2             &kp F3    &kp F4    &kp F5       &kp F6              &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS              &hc DOLLAR KP_NUMBER_4       &hc PERCENT KP_NUMBER_5  &hc CARET KP_NUMBER_6
+&kp LSHFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &trans    &trans       &hc UNDER KP_MINUS  &kp PLUS                   &hc RIGHT_PARENTHESIS KP_NUMBER_0  &hc EXCLAMATION KP_NUMBER_1  &hc AT_SIGN KP_NUMBER_2  &hc HASH KP_NUMBER_3
+                                                &kp LGUI  &trans    &kp SPACE    &kp RET             &trans                     &trans
             >;
         };
     };
