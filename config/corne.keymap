@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     combos {
@@ -85,7 +86,7 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&mt ESCAPE TAB    &hc LS(Q) Q  &hc LS(W) W  &hc LS(E) E  &hc LS(R) R  &hc LS(T) T    &hc LS(Y) Y  &hc LS(U) U          &hc LS(I) I          &hc LS(O) O      &hc LS(P) P        &kp BSPC
+&kp TAB           &hc LS(Q) Q  &hc LS(W) W  &hc LS(E) E  &hc LS(R) R  &hc LS(T) T    &hc LS(Y) Y  &hc LS(U) U          &hc LS(I) I          &hc LS(O) O      &hc LS(P) P        &kp BSPC
 &kp LEFT_ALT      &hc LS(A) A  &hc LS(S) S  &hc LS(D) D  &hc LS(F) F  &hc LS(G) G    &hc LS(H) H  &hc LS(J) J          &hc LS(K) K          &hc LS(L) L      &hc LS(SEMI) SEMI  &hc LS(SQT) SQT
 &kp LEFT_CONTROL  &hc LS(Z) Z  &hc LS(X) X  &hc LS(C) C  &hc LS(V) V  &hc LS(B) B    &hc LS(N) N  &hc LS(M) M          &hc LS(COMMA) COMMA  &hc LS(DOT) DOT  &kp DELETE         &mt RSHIFT QUESTION
                                             &mo 1        &mo 2        &kp RET        &kp SPACE    &hc BACKSLASH SLASH  &kp LEFT_WIN
@@ -95,20 +96,20 @@
         lower_layer {
             display-name = "Lower";
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4         &kp N5              &kp N6   &kp N7  &kp N8   &kp N9    &kp N0    &kp DELETE
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4        &trans   &trans  &trans   &trans    &kp UP    &trans
-&kp LSHFT   &trans        &trans        &trans        &kp LESS_THAN  &kp GREATER_THAN    &trans   &trans  &kp F20  &kp LEFT  &kp DOWN  &kp RIGHT
-                                        &kp LGUI      &trans         &kp LC(LEFT)        &kp RET  &trans  &trans
+&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4         &kp N5              &kp N6         &kp N7  &kp N8        &kp N9     &kp N0    &kp DELETE
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4        &trans         &trans  &trans        &mkp LCLK  &kp UP    &mkp RCLK
+&kp LSHFT   &trans        &trans        &trans        &kp LESS_THAN  &kp GREATER_THAN    &trans         &trans  &trans        &kp LEFT   &kp DOWN  &kp RIGHT
+                                        &kp LGUI      &trans         &kp LC(LEFT)        &kp LC(RIGHT)  &trans  &kp LEFT_WIN
             >;
         };
 
         raise_layer {
             display-name = "Raise";
             bindings = <
-&kp TAB    &kp EXCL          &kp AT             &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET           &hc LEFT_BRACE LEFT_BRACE  &hc RIGHT_BRACE RIGHT_BRACKET      &hc AMPS KP_NUMBER_7         &hc ASTRK KP_NUMBER_8    &hc TILDE KP_NUMBER_9
-&kp LCTRL  &kp F1            &kp F2             &kp F3    &kp F4    &kp F5       &kp F6              &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS              &hc DOLLAR KP_NUMBER_4       &hc PERCENT KP_NUMBER_5  &hc CARET KP_NUMBER_6
-&kp LSHFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &trans    &trans       &hc UNDER KP_MINUS  &kp PLUS                   &hc RIGHT_PARENTHESIS KP_NUMBER_0  &hc EXCLAMATION KP_NUMBER_1  &hc AT_SIGN KP_NUMBER_2  &hc HASH KP_NUMBER_3
-                                                &kp LGUI  &trans    &kp SPACE    &kp RET             &trans                     &trans
+&kp ESCAPE  &kp EXCL          &kp AT             &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET        &hc LEFT_BRACE LEFT_BRACE  &hc RIGHT_BRACE RIGHT_BRACKET  &hc AMPS N7               &hc ASTRK N8          &hc TILDE N9
+&kp LCTRL   &kp F1            &kp F2             &kp F3    &kp F4    &kp F5       &trans           &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS          &hc DOLLAR NUMBER_4       &hc PERCENT N5        &hc CARET NUMBER_6
+&kp LSHFT   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &trans    &trans       &hc UNDER MINUS  &kp PLUS                   &hc RIGHT_PARENTHESIS N0       &hc EXCLAMATION NUMBER_1  &hc AT_SIGN NUMBER_2  &hc HASH NUMBER_3
+                                                 &kp LGUI  &trans    &kp SPACE    &kp RET          &trans                     &trans
             >;
         };
     };
